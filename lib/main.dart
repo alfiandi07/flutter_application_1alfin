@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1alfin/day_5/styling.dart';
+import 'package:flutter_application_1alfin/day_5/layouting.dart';
+import 'package:flutter_application_1alfin/day_5/scaffold.dart';
+import 'package:flutter_application_1alfin/day_5/tugas.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,7 +33,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: StylingDay5()
+      home: StylingTugas5(),
     );
   }
 }
@@ -120,4 +122,3 @@ class MyApp extends StatelessWidget {
 //       ),
 //     );
 //   }
-
