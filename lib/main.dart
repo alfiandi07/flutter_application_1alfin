@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1alfin/image.dart';
+import 'package:flutter_application_1alfin/day_8/gridview.dart';
+import 'package:flutter_application_1alfin/day_8/listview.dart';
+import 'package:flutter_application_1alfin/day_8/singlechildscrollview.dart';
+import 'package:flutter_application_1alfin/day_8/textfield.dart';
+import 'package:flutter_application_1alfin/day_8/tugas3.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,7 +35,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: ImageContainerDay6(),
+      home: TugasWidget3(),
     );
   }
 }
