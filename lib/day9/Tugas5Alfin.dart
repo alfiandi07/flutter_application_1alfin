@@ -20,7 +20,7 @@ class _Day9State extends State<TugasDay9> {
       appBar: AppBar(
         title: const Text("Interaksi Flutter"),
         centerTitle: true,
-        backgroundColor: Colors.amberAccent,
+        backgroundColor: const Color.fromARGB(255, 219, 195, 115),
       ),
 
       floatingActionButton: FloatingActionButton(
@@ -35,7 +35,7 @@ class _Day9State extends State<TugasDay9> {
 
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(20),
+          padding: const EdgeInsets.all(50),
           child: Column(
             children: [
               /// ElevatedButton
@@ -61,7 +61,7 @@ class _Day9State extends State<TugasDay9> {
                   ),
                 ),
 
-              const SizedBox(height: 30),
+              const SizedBox(height: 10),
 
               /// IconButton
               const Text("ini tentang IconButton:"),
@@ -151,7 +151,7 @@ class _Day9State extends State<TugasDay9> {
                     counter += 1;
                   });
 
-                  print("Ditekan sekali");
+                  print("Ditekan 1 kali");
                 },
 
                 onDoubleTap: () {
@@ -159,7 +159,7 @@ class _Day9State extends State<TugasDay9> {
                     counter += 2;
                   });
 
-                  print("Ditekan dua kali");
+                  print("Ditekan 2 kali");
                 },
 
                 onLongPress: () {

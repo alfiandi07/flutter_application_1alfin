@@ -1,19 +1,20 @@
 // import 'package:flutter/material.dart';
 
-// class ContohStatefull extends StatefulWidget {
-//   const ContohStatefull({super.key});
+// class MyWidget3 extends StatelessWidget {
+//   const MyWidget3({super.key});
 
-//   @override
-//   State<ContohStatefull> createState() => _ContohStatefullState();
-// }
-
-// class _ContohStatefullState extends State<ContohStatefull> {
-//   int counter = 0;
-
-//   bool showImage = false;
 //   @override
 //   Widget build(BuildContext context) {
 //     return Scaffold(
+//       appBar: AppBar(
+//         title: Text(
+//           "SAYA AKAN LAWAN",
+//           style: TextStyle(fontVariations: List.empty(growable: true)),
+//         ),
+//         backgroundColor: Colors.amber,
+//         centerTitle: true,
+//         actions: [Icon(Icons.home)],
+//       ),
 //       body: Column(
 //         children: [
 //           SizedBox(height: 150),
@@ -84,5 +85,6 @@
 //         ],
 //       ),
 //     );
+//     ;
 //   }
 // }

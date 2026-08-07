@@ -1,12 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1alfin/day_13/Drawe.dart';
 
-class Tugas6Day11 extends StatelessWidget {
-  const Tugas6Day11({super.key});
+class Tugas10Day16 extends StatefulWidget {
+  const Tugas10Day16({super.key});
 
+  @override
+  State<Tugas10Day16> createState() => _Tugas10Day16State();
+}
+
+class _Tugas10Day16State extends State<Tugas10Day16> {
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
+  final TextEditingController confirmPasswordController =
+      TextEditingController();
+
+  final _formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _formKey,
       backgroundColor: const Color.fromARGB(255, 202, 201, 201),
       body: Stack(
         children: [
@@ -50,7 +62,7 @@ class Tugas6Day11 extends StatelessWidget {
                 ),
                 SizedBox(height: 50),
                 Container(
-                  // height: 150,
+                  // height: 170,
                   width: 350,
                   decoration: BoxDecoration(
                     color: Colors.transparent,
@@ -61,7 +73,16 @@ class Tugas6Day11 extends StatelessWidget {
                     children: [
                       Padding(
                         padding: const EdgeInsets.all(10),
-                        child: TextField(
+                        child: TextFormField(
+                          controller: passwordController,
+                          validator: (value) {
+                            if (value == null || value.isEmpty) {
+                              return "Email tidak boleh kosong";
+                            } else if (value.contains('@')) {
+                              return "Email tidak valid";
+                            }
+                            return null;
+                          },
                           decoration: InputDecoration(
                             hintText: "Your Email/id",
                             hintStyle: TextStyle(fontSize: 17),
@@ -73,6 +94,7 @@ class Tugas6Day11 extends StatelessWidget {
                           ),
                         ),
                       ),
+
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 20),
                         child: Divider(
@@ -83,7 +105,16 @@ class Tugas6Day11 extends StatelessWidget {
                       ),
                       Padding(
                         padding: const EdgeInsets.all(10),
-                        child: TextField(
+                        child: TextFormField(
+                          controller: passwordController,
+                          validator: (value) {
+                            if (value == null || value.isEmpty) {
+                              return "Password tidak boleh kosong";
+                            } else if (value.contains('@')) {
+                              return "Password tidak valid";
+                            }
+                            return null;
+                          },
                           decoration: InputDecoration(
                             hintText: "Your Password",
                             prefixIcon: Icon(
@@ -109,8 +140,11 @@ class Tugas6Day11 extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 25),
-                TextButton(
+                ElevatedButton(
                   onPressed: () {
+                    print(emailController.text);
+                    print(passwordController.text);
+                    if (_formKey.currentState!.validate()) {}
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: ((context) => DrawerDay13())),

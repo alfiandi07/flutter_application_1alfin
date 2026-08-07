@@ -1,8 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1alfin/day_8/tugas3.dart';
-import 'package:flutter_application_1alfin/state.dart';
+import 'package:flutter_application_1alfin/Day_16/Tugas10Day16.dart';
+import 'package:flutter_application_1alfin/Day_17/servis/preference_handler.dart';
+import 'package:flutter_application_1alfin/Day_17/servis/view/login_day_17.dart';
+import 'package:flutter_application_1alfin/day11/login.dart';
+import 'package:flutter_application_1alfin/day11/tugas6.dart';
+import 'package:flutter_application_1alfin/day_13/Drawe.dart';
+import 'package:flutter_application_1alfin/day_18/view/loginday18.dart';
+import 'package:intl/date_symbol_data_local.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await initializeDateFormatting("id_ID,", null);
+  await PreferenceHandler.init();
   runApp(const MyApp());
 }
 
@@ -13,6 +22,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
@@ -32,7 +42,14 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: ContohStatefull(),
+      // // PUSH NAMED
+      // initialRoute: "/",
+      routes: {
+        // "/": (context) => LoginDay17(),
+        //   "/": (context) => const Tugas6Day11(),
+        //   "/Home": (context) => Tugas7day14(),
+      },
+      home: Tugas10Day16(),
     );
   }
 }

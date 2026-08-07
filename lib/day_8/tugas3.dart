@@ -27,9 +27,8 @@ class Tugas3 extends StatelessWidget {
                   color: Color.fromARGB(244, 231, 228, 228),
                   borderRadius: BorderRadius.circular(15),
                 ),
-                margin: EdgeInsets.all(9),
+
                 height: 400,
-                width: 500,
                 child: Padding(
                   padding: const EdgeInsetsGeometry.all(9.0),
                   child: Column(
@@ -44,6 +43,7 @@ class Tugas3 extends StatelessWidget {
                       ),
                       SizedBox(height: 20),
 
+                      // ignore: avoid_unnecessary_containers
                       Container(
                         child: TextField(
                           decoration: InputDecoration(

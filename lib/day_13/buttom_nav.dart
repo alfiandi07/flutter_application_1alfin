@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1alfin/day_18/view/data_user.dart';
 import 'package:flutter_application_1alfin/day_8/stack.dart';
 import 'package:flutter_application_1alfin/layouting.dart';
 import 'package:flutter_application_1alfin/localmart/test.dart';
@@ -22,7 +23,7 @@ class _BottomDay13State extends State<BottomDay13> {
   final List<Widget> _widgetOption = [
     LocalMartApp(),
     LayoutingDay5(),
-    StackDay8(),
+    DataUserDay18(),
   ];
   @override
   Widget build(BuildContext context) {
