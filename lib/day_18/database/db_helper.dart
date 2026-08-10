@@ -21,13 +21,15 @@ class DBHelper {
 
     return await openDatabase(
       path,
-      version: 2,
+      version: 1,
       onCreate: (db, version) async {
         await db.execute('''
           CREATE TABLE users(
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             email TEXT UNIQUE,
-            password TEXT
+            password TEXT,
+            noHp TEXT,
+            kota TEXT
           )
         ''');
       },

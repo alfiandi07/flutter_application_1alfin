@@ -17,10 +17,14 @@ class _LoginDay18SQFLITEState extends State<LoginDay18SQFLITE> {
   // Controller untuk membaca dan mengontrol isi field input email.
   final TextEditingController emailC = TextEditingController();
   final TextEditingController passwordC = TextEditingController();
+  final TextEditingController noHpController = TextEditingController();
+  final TextEditingController kotaController = TextEditingController();
   final _formKey = GlobalKey<FormState>();
   void register() async {
     final user = emailC.text.trim();
     final pass = passwordC.text;
+    final noHp = noHpController.text;
+    final kota = kotaController.text;
 
     if (user.isEmpty || pass.isEmpty) {
       ScaffoldMessenger.of(
@@ -29,7 +33,12 @@ class _LoginDay18SQFLITEState extends State<LoginDay18SQFLITE> {
       return;
     }
 
-    final pengguna = UseMoodelSQL(email: user, password: pass);
+    final pengguna = UseMoodelSQL(
+      email: user,
+      password: pass,
+      noHp: noHp,
+      kota: kota,
+    );
 
     bool success = await DBHelper().registerUser(pengguna);
 
@@ -62,7 +71,7 @@ class _LoginDay18SQFLITEState extends State<LoginDay18SQFLITE> {
     if (!mounted) return;
 
     if (pengguna != null) {
-      context.pushAndRemoveAll(BottomDay13());
+      context.pushAndRemoveAll(DrawerDay13());
     } else {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(

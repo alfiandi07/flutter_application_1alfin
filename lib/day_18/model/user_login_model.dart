@@ -5,10 +5,25 @@ class UseMoodelSQL {
   final int? id;
   final String email;
   final String password;
-  UseMoodelSQL({this.id, required this.email, required this.password});
+  final String noHp;
+  final String kota;
+
+  UseMoodelSQL({
+    this.id,
+    required this.email,
+    required this.password,
+    required this.noHp,
+    required this.kota,
+  });
 
   Map<String, dynamic> toMap() {
-    return <String, dynamic>{'id': id, 'email': email, 'password': password};
+    return <String, dynamic>{
+      'id': id,
+      'email': email,
+      'password': password,
+      'noHp': noHp,
+      'kota': kota,
+    };
   }
 
   factory UseMoodelSQL.fromMap(Map<String, dynamic> map) {
@@ -16,6 +31,8 @@ class UseMoodelSQL {
       id: map['id'] != null ? map['id'] as int : null,
       email: map['email'] as String,
       password: map['password'] as String,
+      noHp: map['noHp'] as String,
+      kota: map['kota'] as String,
     );
   }
 
