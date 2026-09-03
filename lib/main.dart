@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1alfin/Day_16/Tugas10Day16.dart';
 import 'package:flutter_application_1alfin/Day_17/servis/preference_handler.dart';
 import 'package:flutter_application_1alfin/Day_17/servis/view/login_day_17.dart';
+import 'package:flutter_application_1alfin/Day_17/servis/view/splash_screen.dart';
 import 'package:flutter_application_1alfin/day11/login.dart';
 import 'package:flutter_application_1alfin/day11/tugas6.dart';
+import 'package:flutter_application_1alfin/day32/views/beranda.dart';
 import 'package:flutter_application_1alfin/day_13/Drawe.dart';
-import 'package:flutter_application_1alfin/day_18/view/loginday18.dart';
+import 'package:flutter_application_1alfin/day_18/view/LoginTugas13.dart';
 import 'package:intl/date_symbol_data_local.dart';
 
 void main() async {
@@ -40,7 +42,7 @@ class MyApp extends StatelessWidget {
         //
         // This works for code too, not just values: Most code changes can be
         // tested with just a hot reload.
-        colorScheme: .fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       // // PUSH NAMED
       // initialRoute: "/",
@@ -49,7 +51,7 @@ class MyApp extends StatelessWidget {
         //   "/": (context) => const Tugas6Day11(),
         //   "/Home": (context) => Tugas7day14(),
       },
-      home: Tugas10Day16(),
+      home: beranda(),
     );
   }
 }
